@@ -21,6 +21,8 @@ RUN apt-get update && apt-get upgrade -y && \
 	cd /
 
 COPY ./install-ompl-ubuntu.sh /opt/install-ompl-ubuntu.sh
+
+RUN chmod +x /opt/install-ompl-ubuntu.sh
 RUN /opt/install-ompl-ubuntu.sh --python
 
 ENV DISPLAY 10.0.75.1:0.0
