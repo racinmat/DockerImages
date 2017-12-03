@@ -1,5 +1,5 @@
 FROM azathoth/python:2
-RUN pip install enum numpy matplotlib image scipy
+RUN pip install enum numpy matplotlib Pillow scipy
 
 COPY ./LKH/install.sh /opt/LKH/install.sh
 
