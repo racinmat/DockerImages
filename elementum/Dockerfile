@@ -6,9 +6,9 @@ ARG ELEMENTUM_ARCH=linux_x64
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends ca-certificates wget unzip && \
-    apt-get clean && rm -rf /var/lib/apt/lists/* && \
-    useradd -m ubuntu
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
+# ubuntu:24.04 already ships the 'ubuntu' user (uid 1000), no useradd needed
 USER ubuntu
 WORKDIR /home/ubuntu
 
