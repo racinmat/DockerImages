@@ -18,7 +18,8 @@ RUN wget "https://github.com/elgatito/${ADDON_NAME}/releases/download/v${ELEMENT
     mkdir -p elementum_data/elementum_addon_data \
              elementum_data/elementum_torrents \
              elementum_data/elementum_library \
-             elementum_downloads
+             elementum_downloads && \
+    chmod 755 /home/ubuntu
 
 VOLUME /home/ubuntu/elementum_data
 VOLUME /home/ubuntu/elementum_downloads
